@@ -1,0 +1,1612 @@
+/* Media Queries */
+
+@media (min-width: 1600px) {
+    .modal-dialog .modal-content {
+        width: 100% !important;
+    }
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1280px) {
+    .file-upload-table-list.custom-mat-table,
+    .upload-file-data .custom-mat-table {
+        min-width: 100% !important;
+    }
+
+    table,
+    .mat-elevation-z8,
+    .mat-table {
+        min-width: 1160px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .filter-section .custom-row-filter .col-xl-2 {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+
+    .user .max-filter-dropdown {
+        max-width: 100%;
+    }
+
+    /*.user .max-search {
+        max-width: 100%;
+    }*/
+
+    /*.company-profile .user .max-search {
+        max-width: 330px;
+    }*/
+}
+
+
+/* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .file-upload-table-list.custom-mat-table,
+    .upload-file-data .custom-mat-table {
+        min-width: 100% !important;
+    }
+
+    table,
+    .mat-elevation-z8,
+    .mat-table {
+        min-width: 1160px;
+    }
+
+    .preview-modal .logo-link img {
+        width: 100px;
+    }
+
+    .preview-modal .welcome-name {
+        min-width: 65px;
+        max-width: 69px;
+        font-size: 14px;
+    }
+
+    .report .filter-section label {
+        white-space: nowrap;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1199.98px) {
+    header .titleBar {
+        white-space: nowrap;
+    }
+
+    .user .max-filter-dropdown {
+        min-width: 25px !important;
+    }
+
+    /*.user .max-search {
+        max-width: 170px;
+    }*/
+
+    .max-filter-dropdown {
+        min-width: 100px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    .machines .max-filter-dropdown,
+    .tasks .max-filter-dropdown,
+    .user .max-filter-dropdown,
+    .company .max-filter-dropdown,
+    .facility .max-filter-dropdown {
+        max-width: 100%;
+    }
+
+    .tasks .max-filter-dropdown {
+        min-width: 185px;
+    }
+
+    /*.user .max-search*/
+    .tasks .max-search {
+        max-width: 100%;
+    }
+
+    /*.company-profile .user .max-search {
+        max-width: 330px;
+    }*/
+}
+
+@media (min-width: 768px) and (max-width: 1150px) {
+    .titleBar {
+        display: none;
+    }
+
+    .btn-settings {
+        max-width: 50%;
+        flex: 0 0 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .max-search {
+        /*max-width: 330px;*/
+        max-width: 380px;
+    }
+
+    .row.max-col-5 .col-lg {
+        max-width: 20%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .mobile-wrapper .form-col {
+        flex: 0 0 30%;
+        max-width: 30%;
+    }
+
+    .extend-ipad {
+        width: 100%;
+        flex: 100%;
+    }
+}
+
+/* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .menu-icon-inner {
+        display: block !important;
+    }
+
+    .form-tablet,
+    .upload-grid {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+
+    .form-col {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .form-col-6 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+    .sidemenu-arrow,
+    .table-noRecord mat-table.mat-table {
+        display: none;
+    }
+
+    mat-sidenav-content {
+        margin-left: 0 !important;
+    }
+
+    .tab-mx-0 {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .custom-mat-table {
+        min-width: 100%;
+    }
+
+    .form-tablet-2 {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+    }
+
+    .form-tablet-4 {
+        flex: 0 0 25% !important;
+        max-width: 25% !important;
+    }
+
+    .form-content-align,
+    .form-btn-col {
+        margin-top: 0;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        text-align: right;
+    }
+
+    .preview-modal .logo-link img {
+        width: 100px;
+        /*max-height: 100%;*/
+    }
+
+    .preview-modal .welcome-name {
+        min-width: 65px;
+        max-width: 69px;
+        font-size: 14px;
+    }
+
+    .user .max-filter-dropdown {
+        min-width: 150px;
+    }
+
+    .add-task .form-col.Status-dropdown {
+        margin-right: 50%;
+    }
+
+    /*.add-measure-col {
+        margin-top: 0;
+        padding-bottom: 1.4rem;
+        text-align: right !important;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }*/
+
+    .machines .ng-select-with-icon .ng-select {
+        display: inline-grid;
+    }
+}
+
+/* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .titleBar {
+        display: none;
+    }
+
+    .btn-settings {
+        max-width: 50%;
+        flex: 0 0 50%;
+    }
+
+    /*.carousel.slide {
+        height: 60vh !important;
+    }*/
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /*.user .max-search,*/
+    .user .max-filter-dropdown {
+        max-width: 100%;
+    }
+
+    .mobile-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .mobile-wrapper .form-col {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+
+    .form-col + .form-col.add-input-value {
+        width: 100%;
+        max-width: 100%;
+        text-align: right;
+        margin-top: 0;
+        flex: 100%;
+    }
+    .mobile-wrapper .form-col.custom-form-btn {
+        max-width: max-content;
+        flex: auto;
+    }
+    .max-width {
+        width: calc(100% - 180px);
+        flex-basis: calc(100% - 180px);
+        max-width: 100%;
+    }
+}
+
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+*/
+
+@media only screen and (max-width: 575.98px) {
+    .mb-remove {
+        display: none;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767.98px) {
+    .mob-col,
+    .upload-grid,
+    .form-col,
+    .form-col-6 {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .mob-mx-0 {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .mob-px-default {
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+    }
+
+    .titleBar,
+    .table-noRecord mat-table.mat-table {
+        display: none;
+    }
+
+    .btn-settings .welcome-class .cloumn-align {
+        display: none !important;
+    }
+
+    .form-tablet {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+
+    .menu-icon-inner {
+        display: block !important;
+    }
+
+    .mobile-table {
+        width: 150px;
+        display: contents;
+        font-weight: bold;
+        white-space: pre;
+    }
+
+    .mat-header-cell,
+    mat-cell {
+        padding-left: 0px;
+        padding-top: 5px;
+    }
+
+    /* Table header hide */
+    table,
+    .mat-elevation-z8,
+    .mat-table {
+        min-width: 100% !important;
+    }
+
+    .mat-header-row {
+        display: none;
+    }
+
+    .mat-row {
+        flex-direction: column;
+        align-items: flex-start;
+        /*padding: 8px 24px;*/
+        padding: 16px 20px;
+    }
+
+    mat-cell:first-of-type,
+    mat-footer-cell:first-of-type,
+    mat-header-cell:first-of-type {
+        padding-left: 0px !important;
+    }
+
+    mat-cell:last-of-type,
+    mat-footer-cell:last-of-type,
+    mat-header-cell:last-of-type {
+        padding-right: 0px !important;
+    }
+
+    mat-cell.mat-cell {
+        max-width: 100% !important;
+        width: 100%;
+        padding-bottom: 5px;
+        text-align: left !important;
+        align-items: flex-start !important;
+    }
+
+    mat-footer-row,
+    mat-row {
+        min-height: 100% !important;
+    }
+
+    /* Table header hide */
+
+    .sidemenu-arrow {
+        display: none;
+    }
+
+    mat-sidenav-content {
+        margin-left: 0 !important;
+    }
+
+    .custom-mat-table {
+        min-width: 100%;
+    }
+
+    .mob-m {
+        margin-bottom: .5rem !important;
+        padding-left: 0;
+    }
+
+    .cdk-column-ChunkSize.mat-column-ChunkSize,
+    .cdk-column-HorsePower.mat-column-HorsePower,
+    .cdk-column-RPM.mat-column-RPM,
+    .cdk-column-SumpSize.mat-column-SumpSize,
+    .cdk-column-Route.mat-column-Route, .cdk-column-SupervisorID.mat-column-SupervisorID, .cdk-column-CoolantCode.mat-column-CoolantCode,
+    .cdk-column-ModelNumber.mat-column-ModelNumber, .cdk-column-SerialNumber.mat-column-SerialNumber, .cdk-column-MachineNumber.mat-column-MachineNumber,
+    .cdk-column-MachineID.mat-column-MachineID, .cdk-column-Year.mat-column-Year, .cdk-column-ZoneCode.mat-column-ZoneCode,
+    mat-cell.cdk-column-UserID.mat-column-UserID, .user mat-cell.mat-cell.cdk-column-Edit.mat-column-Edit .action,
+    .cdk-column-CalculationReq.mat-column-CalculationReq, .cdk-column-BrixFactor.mat-column-BrixFactor,
+    .cdk-column-IsCalculationRequired.mat-column-IsCalculationRequired, .cdk-column-RedRangeLow.mat-column-RedRangeLow,
+    .cdk-column-YellowRangeLow.mat-column-YellowRangeLow, .cdk-column-GreenRangeLow.mat-column-GreenRangeLow,
+    mat-cell.cdk-column-Edit.mat-column-Edit .col-auto, mat-cell.cdk-column-edit.mat-column-edit .col-auto {
+        justify-content: inherit;
+        text-align: left;
+    }
+
+    .table-vertical-scroll .table-fixed {
+        overflow: inherit;
+        height: auto;
+    }
+
+    .form-content-align {
+        margin-top: 0;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        text-align: right;
+    }
+
+    .form-btn-col {
+        margin-top: 0;
+    }
+
+    .mob-left {
+        justify-content: flex-start !important;
+    }
+
+    .mob-mb:not(:last-child) {
+        margin-bottom: 0.5rem;
+    }
+
+    .status-dropdown {
+        max-width: 100px;
+    }
+
+    .table-fixed {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    .user-menu {
+        border: 0;
+        width: auto;
+    }
+
+    .btn-settings .logo-sec {
+        display: none;
+    }
+
+    .preview-modal {
+        margin: 1rem auto;
+    }
+
+    /*.carousel.slide {
+        height: 60vh !important;
+    }*/
+
+    bs-tooltip-container.tooltip.mattable-tooltip-width .tooltip-inner,
+    bs-tooltip-container.tooltip.tasks-tooltip-width .tooltip-inner,
+    bs-tooltip-container.tooltip.desc-tooltip-width .tooltip-inner {
+        max-width: calc(100vw - 80px);
+    }
+
+    .max-search,
+    .max-filter-dropdown {
+        max-width: 100%;
+    }
+
+    .card-box-shadow.machine-type-table,
+    .card-box-shadow.user-table,
+    .card-box-shadow.tasks-table {
+        margin-top: 0.25em !important;
+    }
+
+    .table-sticky {
+        overflow: inherit !important;
+        max-height: 100% !important;
+    }
+
+    .mat-table mat-row:nth-child(2) {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    .step-instruction-box .instruction-steps,
+    .image-video-box .task-description {
+        margin: 15px 0;
+        padding: 0 10px;
+    }
+
+    .step-instruction-box .action,
+    .image-video-box .action {
+        justify-content: flex-end;
+        padding: 0 10px;
+    }
+
+    .image-video-box .task-description {
+        padding: 0 8px !important;
+    }
+
+    span.thumb-image img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .propeties-detail-list dt, .propeties-detail-list dd {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0 0.5rem;
+    }
+
+    .propeties-detail-list dt {
+        margin-bottom: 0.2rem;
+    }
+
+    .task-history img.download-excel,
+    .task-history .max-reset-btn button.btn,
+    .task-history .add-fluid-wrapper button.btn,
+    .zone .add-zone-wrapper button.btn,
+    .route .add-route-wrapper button.btn {
+        margin-top: 2rem;
+    }
+
+    .add-measure-col {
+        margin-top: 0;
+        padding-bottom: 1.4rem;
+        text-align: right !important;
+    }
+
+    .custom-tooltip-black.info-tooltip.machine-type-info:before,
+    .custom-tooltip-black.info-tooltip.machine-type-info:after {
+        left: 182px;
+    }
+
+    /* MachineType Tab Changes */
+    .machine-mview .mat-tab-links {
+        display: flex !important;
+    }
+
+    .machine-mview .mat-tab-links a.mat-tab-link {
+        min-width: 160px;
+    }
+
+    .sequenceorder-table mat-cell.cdk-column-Route.mat-column-Route {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    video {
+        min-width: 100%;
+    }
+
+    .mobile-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .mobile-wrapper .form-col {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+
+    .form-col + .form-col.add-input-value {
+        width: 100%;
+        max-width: 100%;
+        text-align: right;
+        margin-top: 0;
+        flex: 100%;
+    }
+    .mobile-wrapper .form-col.custom-form-btn {
+        max-width: max-content;
+        flex: auto;
+    }
+
+    table.table-mapping {
+        min-width: 400px !important;
+    }
+
+    .bulk-upload-table .cdk-column-Key.mat-column-Key .action,
+    .test-history-table mat-cell.cdk-column-ImagePath.mat-column-ImagePath .action,
+    .test-history-table mat-cell.cdk-column-TestNotes.mat-column-TestNotes .action,
+    .upload-preview-table mat-cell.cdk-column-Key.mat-column-Key .col-auto,
+    .report-machines-table mat-cell.cdk-column-Notes.mat-column-Notes .action {
+        justify-content: flex-start;
+        text-align: left;
+        /*padding-left: 10px;*/
+    }
+
+    .cdk-column-Edit.mat-column-Edit,
+    .cdk-column-edit.mat-column-edit,
+    .cdk-column-Notes.mat-column-Notes,
+    .cdk-column-ImagePath.mat-column-ImagePath,
+    .cdk-column-TestNotes.mat-column-TestNotes,
+    .bulk-upload-table mat-cell.mat-cell.cdk-column-Key.mat-column-Key,
+    .upload-preview-table .cdk-column-Key.mat-column-Key {
+        align-items: center !important;
+    }
+
+    .cdk-column-ImagePath.mat-column-ImagePath .col-auto.action,
+    .cdk-column-TestNotes.mat-column-TestNotes .col-auto.action,
+    .cdk-column-Notes.mat-column-Notes .col-auto.action {
+        padding-left: 0;
+    }
+
+    .mobile-row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .mobile-hide {
+        display: none !important;
+    }
+
+    .bulk-history-modal {
+        width: 100%;
+    }
+
+    .max-width {
+        width: calc(100% - 180px);
+        flex-basis: calc(100% - 180px);
+        max-width: 100%;
+    }
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 0px) and (max-width: 480px) {
+    .mob-col {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .mob-mx-0 {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .mob-px-default {
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+    }
+
+    .titleBar,
+    .table-noRecord mat-table.mat-table {
+        display: none;
+    }
+
+    .btn-settings .welcome-class .cloumn-align {
+        display: none !important;
+    }
+
+    .menu-icon-inner {
+        display: block !important;
+    }
+
+    .form-col,
+    .form-col-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .mobile-table {
+        width: 110px;
+        display: contents;
+        font-weight: bold;
+        white-space: pre;
+    }
+
+    .mat-header-cell,
+    mat-cell {
+        padding-left: 0px;
+        padding-top: 5px;
+    }
+
+    /* Table header hide */
+
+    table,
+    .mat-elevation-z8,
+    .mat-table {
+        /*min-width: 100% !important;*/
+        min-width: 320px !important;
+        /*min-width: 200px !important;*/
+    }
+
+    .mat-header-row {
+        display: none;
+    }
+
+    .mat-row {
+        flex-direction: column;
+        align-items: start;
+        /*padding: 8px 24px;*/
+        padding: 16px 20px;
+    }
+
+    mat-cell:first-of-type,
+    mat-footer-cell:first-of-type,
+    mat-header-cell:first-of-type {
+        padding-left: 0px !important;
+    }
+
+    mat-cell:last-of-type,
+    mat-footer-cell:last-of-type,
+    mat-header-cell:last-of-type {
+        padding-right: 0px !important;
+    }
+
+    mat-cell.mat-cell {
+        max-width: 100% !important;
+        width: 100%;
+        padding-bottom: 5px;
+        text-align: left !important;
+        display: flex;
+        align-items: flex-start !important;
+    }
+
+    mat-footer-row,
+    mat-row {
+        min-height: auto !important;
+    }
+
+    /* Table header hide */
+
+    .sidemenu-arrow {
+        display: none;
+    }
+
+    mat-sidenav-content {
+        margin-left: 0 !important;
+    }
+
+    .custom-mat-table {
+        min-width: 100%;
+    }
+
+    .mob-m {
+        margin-bottom: .5rem !important;
+        padding-left: 0;
+    }
+
+    .cdk-column-ChunkSize.mat-column-ChunkSize,
+    .cdk-column-HorsePower.mat-column-HorsePower,
+    .cdk-column-RPM.mat-column-RPM,
+    .cdk-column-SumpSize.mat-column-SumpSize,
+    .cdk-column-Route.mat-column-Route, .cdk-column-SupervisorID.mat-column-SupervisorID, .cdk-column-CoolantCode.mat-column-CoolantCode,
+    .cdk-column-ModelNumber.mat-column-ModelNumber, .cdk-column-SerialNumber.mat-column-SerialNumber, .cdk-column-MachineNumber.mat-column-MachineNumber
+    .cdk-column-MachineID.mat-column-MachineID, .cdk-column-Year.mat-column-Year, .cdk-column-ZoneCode.mat-column-ZoneCode,
+    mat-cell.cdk-column-UserID.mat-column-UserID, .user mat-cell.mat-cell.cdk-column-Edit.mat-column-Edit .action,
+    .cdk-column-CalculationReq.mat-column-CalculationReq, .cdk-column-BrixFactor.mat-column-BrixFactor,
+    .cdk-column-IsCalculationRequired.mat-column-IsCalculationRequired, .cdk-column-RedRangeLow.mat-column-RedRangeLow,
+    .cdk-column-YellowRangeLow.mat-column-YellowRangeLow, .cdk-column-GreenRangeLow.mat-column-GreenRangeLow,
+    mat-cell.cdk-column-Edit.mat-column-Edit .col-auto, mat-cell.cdk-column-edit.mat-column-edit .col-auto {
+        justify-content: inherit;
+        text-align: left;
+    }
+
+    .table-vertical-scroll .table-fixed {
+        overflow: inherit;
+        height: auto;
+    }
+
+    .form-content-align {
+        margin-top: 0;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        text-align: right;
+    }
+
+    .form-btn-col {
+        margin-top: 0;
+    }
+
+    .mob-left {
+        justify-content: flex-start !important;
+    }
+
+    .mob-mb:not(:last-child) {
+        margin-bottom: 0.5rem;
+    }
+
+    .btn {
+        min-width: 100px;
+    }
+
+    .status-dropdown {
+        max-width: 100px;
+    }
+
+    .table-fixed {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    .cdk-column-Status.mat-column-Status select.form-control {
+        max-width: 130px;
+    }
+
+    .user-menu {
+        border: 0;
+        width: auto;
+    }
+
+    .btn-settings .logo-sec {
+        display: none;
+    }
+
+    .preview-modal {
+        margin: 1rem auto;
+    }
+
+    .pipe-line {
+        display: none !important;
+    }
+
+    /*.carousel.slide {
+        height: 60vh !important;
+    }*/
+
+    .bg-wrapper {
+        margin: 1.75rem 1rem !important;
+        padding: 5px !important;
+    }
+
+    .tasks-table .cdk-column-Edit.mat-column-Edit {
+        min-width: 300px !important;
+    }
+
+    .card-box-shadow.machine-type-table,
+    .card-box-shadow.user-table,
+    .card-box-shadow.tasks-table,
+    .card-box-shadow.machines-table {
+        margin-top: 0.25em !important;
+        margin-left: 0.75rem !important;
+        margin-right: 0.75rem !important;
+    }
+
+    .card-box-shadow.measures-table {
+        margin-left: 0.75rem !important;
+        margin-right: 0.75rem !important;
+    }
+
+    .cdk-column-Edit.mat-column-Edit, .cdk-column-edit.mat-column-edit {
+        align-items: center;
+    }
+
+    bs-tooltip-container.tooltip.mattable-tooltip-width .tooltip-inner,
+    bs-tooltip-container.tooltip.tasks-tooltip-width .tooltip-inner,
+    bs-tooltip-container.tooltip.desc-tooltip-width .tooltip-inner {
+        max-width: calc(100vw - 80px);
+    }
+
+    .max-search,
+    .max-filter-dropdown {
+        max-width: 100%;
+    }
+
+    .table-sticky {
+        overflow: inherit !important;
+        max-height: 100% !important;
+    }
+
+    .table-sticky {
+        overflow-x: auto !important;
+    }
+
+    .mat-table mat-row:nth-child(2) {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    .table-container {
+        min-width: 150px !important;
+    }
+
+    .mat-paginator-range-label {
+        margin: 0 10px 0 0px !important;
+    }
+
+    mat-paginator button.mat-icon-button {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+
+    .step-instruction-box .instruction-steps,
+    .image-video-box .task-description {
+        margin: 15px 0;
+        padding: 0 10px;
+    }
+
+    .step-instruction-box .action,
+    .image-video-box .action {
+        justify-content: flex-end;
+        padding: 0 10px;
+    }
+
+    .image-video-box .task-description {
+        padding: 0 8px !important;
+    }
+
+    span.thumb-image img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .propeties-detail-list dt, .propeties-detail-list dd {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0 0.5rem;
+    }
+
+    .propeties-detail-list dt {
+        margin-bottom: 0.2rem;
+    }
+
+    .modal-body .task-overview.col {
+        padding: 0;
+    }
+
+    .task-history img.download-excel,
+    .task-history .max-reset-btn button.btn,
+    .task-history .add-fluid-wrapper button.btn,
+    .zone .add-zone-wrapper button.btn,
+    .route .add-route-wrapper button.btn {
+        margin-top: 2rem;
+    }
+
+    .add-measure-col {
+        margin-top: 0;
+        padding-bottom: 1.4rem;
+        text-align: right !important;
+    }
+
+    /*.add-task .mat-tab-body-wrapper, .add-task .mat-tab-body.mat-tab-body-active, .add-task .mat-tab-body, .add-task .mat-tab-body-content,*/
+    .add-machine .mat-tab-body-wrapper, .add-machine .mat-tab-body.mat-tab-body-active, .add-machine .mat-tab-body, .add-machine .mat-tab-body-content,
+    .user-detail .mat-tab-body-wrapper, .user-detail .mat-tab-body.mat-tab-body-active, .user-detail .mat-tab-body, .user-detail .mat-tab-body-content {
+        overflow: auto;
+    }
+
+    /* MachineType Tab Changes */
+    .machine-mview .mat-tab-links {
+        display: flex !important;
+    }
+        
+    .machine-mview .mat-tab-links a.mat-tab-link {
+        min-width: 160px;
+    }
+
+    .custom-tooltip-black.info-tooltip.machine-type-info:before,
+    .custom-tooltip-black.info-tooltip.machine-type-info:after {
+        left: 205px;
+    }
+
+    .sequenceorder-table mat-cell.cdk-column-Route.mat-column-Route {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    video {
+        min-width: 100%;
+    }
+
+    header.navbar {
+        max-height: 64px !important;
+        padding: 0 !important;
+    }
+    .header-div {
+        min-height: 2rem;
+        height: 64px;
+    }
+
+    .content-container {
+        margin-top: 64px;
+        height: calc(100% - 64px);
+    }
+    .custom-sidenav {
+        min-height: calc(100vh - 64px);
+    }
+
+    .mobile-wrapper {
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+
+    .mobile-wrapper .form-col {
+        flex: 0 0 45%;
+        max-width: 45%;
+    }
+
+    .form-col + .form-col.add-input-value {
+        width: 100%;
+        max-width: 100%;
+        text-align: right;
+        margin-top: 0;
+        flex: 100%;
+    }
+    .mobile-wrapper .form-col.form-checkbox:nth-child(3) {
+        margin-top: 0;
+    }
+    .mobile-wrapper .form-col.custom-form-btn {
+        max-width: max-content;
+        flex: auto;
+    }
+
+    .extend-ipad {
+        flex-wrap: wrap;
+        row-gap: 16px;
+    }
+
+    table.table-mapping {
+        min-width: 400px !important;
+    }
+
+    .bulk-upload-table .cdk-column-Key.mat-column-Key .action,
+    .test-history-table mat-cell.cdk-column-ImagePath.mat-column-ImagePath .action,
+    .test-history-table mat-cell.cdk-column-TestNotes.mat-column-TestNotes .action,
+    .upload-preview-table mat-cell.cdk-column-Key.mat-column-Key .col-auto,
+    .report-machines-table mat-cell.cdk-column-Notes.mat-column-Notes .action {
+        justify-content: flex-start;
+        text-align: left;
+        /*padding-left: 10px;*/
+    }
+
+    .cdk-column-Edit.mat-column-Edit,
+    .cdk-column-edit.mat-column-edit,
+    .cdk-column-Notes.mat-column-Notes,
+    .cdk-column-ImagePath.mat-column-ImagePath,
+    .cdk-column-TestNotes.mat-column-TestNotes,
+    .bulk-upload-table mat-cell.mat-cell.cdk-column-Key.mat-column-Key,
+    .upload-preview-table .cdk-column-Key.mat-column-Key {
+        align-items: center !important;
+    }
+
+    .cdk-column-ImagePath.mat-column-ImagePath .col-auto.action,
+    .cdk-column-TestNotes.mat-column-TestNotes .col-auto.action,
+    .cdk-column-Notes.mat-column-Notes .col-auto.action {
+        padding-left: 0;
+    }
+
+    .mobile-row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .mobile-hide {
+        display: none !important;
+    }
+
+    .bulk-history-modal {
+        width: 100%;
+    }
+
+    .max-width {
+        width: calc(100% - 180px);
+        flex-basis: calc(100% - 180px);
+        max-width: 100%;
+    }
+
+    /*.bulk-upload-table .mat-cell.cdk-column-TotalCount.mat-column-TotalCount,
+    .bulk-upload-table .mat-cell.cdk-column-SuccessCount.mat-column-SuccessCount,
+    .bulk-upload-table .mat-cell.cdk-column-FailureCount.mat-column-FailureCount {
+        padding-left: 0;
+    }*/
+}
+
+/* Firefox only */
+
+@-moz-document url-prefix() {
+    .max-reset-btn button.btn,
+    .report .max-reset-btn button.btn {
+        padding: 3px 10px 6px;
+    }
+}
+
+/* For IE only */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .justify-content-end.remove-justify {
+        justify-content: inherit !important
+    }
+
+    .modal-dialog {
+        height: calc(100%- 56px);
+    }
+
+    .modal-dialog.preview-modal {
+        height: auto;
+    }
+    
+    /* Button Changes */
+    .btn {
+        padding: 6px 12px 5px 12px;
+    }
+
+    .add-btn {
+        padding-right: 18px;
+    }
+
+    .max-reset-btn button.btn {
+        padding: 3px 10px 6px;
+    }
+
+    /* New Changes */
+    .landing-content-section {
+        min-height: 470px;
+        /*height: calc(100vh - 128px);*/
+        height: calc(100vh - 50px);
+    }
+
+    span.sub-content {
+        max-height: 42px;
+        float: left;
+    }
+
+    .max-search {
+        /*-ms-flex: 1 0 100%;*/
+        max-width: 100%;
+    }
+
+    .max-filter-dropdown {
+        /*-ms-flex: 1 0 155px;*/
+        max-width: 100%;
+    }
+
+    .machines .max-filter-dropdown {
+        max-width: 250px;
+    }
+
+    .machine-type .max-search {
+        max-width: 330px;
+        flex-basis: 330px;
+    }
+
+    .card-box-shadow {
+        box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.15);
+    }
+
+    .mat-tab-body-wrapper, .mat-tab-body-card, .custom-tab-body-card {
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2), 0px 0px 5px 0px rgba(0,0,0,0.14), 0px 0px 20px 0px rgba(0,0,0,0.12)
+    }
+
+    /* Machine Type */
+
+    .machine-type-table .cdk-column-Status.mat-column-Status {
+        min-width: 105px;
+    }
+
+    .cdk-column-Status.mat-column-Status {
+        min-width: 80px;
+    }
+
+    .cdk-column-Edit.mat-column-Edit, .cdk-column-edit.mat-column-edit {
+        min-width: 120px;
+    }
+
+    /*User start*/
+
+    /*.user .max-filter-dropdown {
+        -ms-flex: 1 0 125px;
+        min-width: 120px;
+    }*/
+
+    .user .max-filter-dropdown {
+        max-width: 50%;
+        flex-basis: calc(33.333% - 15px);
+    }
+
+    .cdk-column-UserName.mat-column-UserName {
+        /*min-width: 20px;*/
+        min-width: 25px;
+    }
+
+    .cdk-column-UserMailID.mat-column-UserMailID {
+        min-width: 75px;
+    }
+
+    .cdk-column-FacilityName.mat-column-FacilityName {
+        min-width: 55px;
+    }
+
+    .user-table .cdk-column-CompanyName.mat-column-CompanyName {
+        min-width: 55px;
+    }
+
+    .user-table .cdk-column-ModifiedDate.mat-column-ModifiedDate {
+        min-width: 40px;
+    }
+
+    .cdk-column-ModifiedBy.mat-column-ModifiedBy {
+        min-width: 40px;
+    }
+
+    .cdk-column-UserEmployeeID.mat-column-UserEmployeeID {
+        min-width: 50px;
+    }
+
+    /*.user-table .cdk-column-ModifiedBy.mat-column-ModifiedBy {
+        min-width: 20px;
+    }*/
+
+    /* Task Table */
+    .tasks-table .cdk-column-Status.mat-column-Status {
+        min-width: 100px;
+    }
+
+    /* Measures Table */
+    .cdk-column-IsCalculationRequired.mat-column-IsCalculationRequired {
+        min-width: 25px;
+    }
+
+    .cdk-column-BrixFactor.mat-column-BrixFactor {
+        min-width: 45px;
+    }
+
+    /*Machine Table*/
+    .machines-table .cdk-column-MachineType.mat-column-MachineType {
+        /*min-width: 30px;*/
+        min-width: 50px;
+    }
+
+    .machines-table .cdk-column-Manufacturer.mat-column-Manufacturer {
+        min-width: 30px;
+    }
+
+    .machines-table .cdk-column-SerialNumber.mat-column-SerialNumber {
+        min-width: inherit;
+    }
+
+    .machines-table .cdk-column-MachineNumber.mat-column-MachineNumber {
+        min-width: 40px;
+    }
+
+    .machines-table .cdk-column-ModifiedDate.mat-column-ModifiedDate {
+        min-width: 40px;
+    }
+
+    .machines-table .cdk-column-Status.mat-column-Status {
+        max-width: 6.5%;
+    }
+
+    .machines-table .cdk-column-FluidName.mat-column-FluidName {
+        min-width: 50px;
+        max-width: 8%;
+    }
+
+    .machines-table .cdk-column-CoolantCode.mat-column-CoolantCode,
+    .machines-table .cdk-column-SupervisorID.mat-column-SupervisorID {
+        min-width: 40px;
+    }
+
+    /*Report Table*/
+    .report-table .cdk-column-TaskName.mat-column-TaskName,
+    .task-history-table .cdk-column-TaskName.mat-column-TaskName {
+        min-width: 165px;
+    }
+
+    .report-table .cdk-column-MachineType.mat-column-MachineType,
+    .task-history-table .cdk-column-MachineType.mat-column-MachineType {
+        min-width: 155px
+    }
+
+    /*.report-table .cdk-column-ScheduledDate.mat-column-ScheduledDate,
+    .task-history-table .cdk-column-ScheduledDate.mat-column-ScheduledDate {
+        min-width: 160px;
+    }*/
+
+    .report-table .cdk-column-Status.mat-column-Status,
+    .task-history-table .cdk-column-Status.mat-column-Status {
+        max-width: 12%;
+    }
+
+    .report-table .cdk-column-CompletedDate.mat-column-CompletedDate,
+    .task-history-table .cdk-column-CompletedDate.mat-column-CompletedDate {
+        min-width: 155px;
+    }
+
+    .report-table .cdk-column-ScheduleDate.mat-column-ScheduleDate,
+    .task-history-table .cdk-column-ScheduleDate.mat-column-ScheduleDate {
+        min-width: 142px;
+    }
+
+    .report-table .cdk-column-Measure.mat-column-Measure,
+    .task-history-table .cdk-column-Measure.mat-column-Measure {
+        min-width: 150px;
+    }
+
+    .report-table .cdk-column-Operator.mat-column-Operator,
+    .task-history-table .cdk-column-Operator.mat-column-Operator {
+        min-width: 120px;
+    }
+
+    .task-WeeklySchedule-table .cdk-column-Recurrence.mat-column-Recurrence {
+        min-width: 186px;
+    }
+
+    .task-WeeklySchedule-table .cdk-column-StartDate.mat-column-StartDate {
+        min-width: 186px;
+    }
+
+    .task-WeeklySchedule-table .cdk-column-CompletedDate.mat-column-CompletedDate {
+        min-width: 180px;
+    }
+
+    .task-OverdueSchedule-table .cdk-column-Recurrence.mat-column-Recurrence {
+        min-width: 186px;
+    }
+
+    .task-OverdueSchedule-table .cdk-column-StartDate.mat-column-StartDate {
+        min-width: 206px;
+    }
+
+    .task-SkippedSchedule-table .cdk-column-Recurrence.mat-column-Recurrence {
+        min-width: 186px;
+    }
+
+    .task-SkippedSchedule-table .cdk-column-StartDate.mat-column-StartDate {
+        min-width: 186px;
+    }
+
+    .task-SkippedSchedule-table .cdk-column-LastRecordedDate.mat-column-LastRecordedDate {
+        min-width: 186px;
+    }
+
+    .task-SkippedSchedule-table .cdk-column-Value.mat-column-Value {
+        min-width: 210px;
+    }
+
+    .cdk-column-Value.mat-column-Value div span {
+        line-height: 31px;
+    }
+
+    .report-table .cdk-column-Value.mat-column-Value {
+        min-width: 95px;
+    }
+
+    /* Task Schedules Table */
+    .task-schedules-table .cdk-column-TaskName.mat-column-TaskName {
+        min-width: 40px;
+    }
+
+    .task-schedules-table .cdk-column-Recurrence.mat-column-Recurrence {
+        min-width: 30px;
+    }
+
+    .cdk-column-ConcentrateColor.mat-column-ConcentrateColor, .cdk-column-ConcentrateOdor.mat-column-ConcentrateOdor {
+        min-width: 70px
+    }
+
+    .cdk-column-RefractionFactor.mat-column-RefractionFactor,
+    .cdk-column-MixingInstruction.mat-column-MixingInstruction {
+        min-width: 90px;
+    }
+
+    .cdk-column-DesignConcentrationHigh.mat-column-DesignConcentrationHigh,
+    .cdk-column-DesignConcentrationLow.mat-column-DesignConcentrationLow {
+        /*min-width: 95px;*/
+        min-width: 160px;
+    }
+
+    .cdk-column-DigitalTitrationFactor.mat-column-DigitalTitrationFactor {
+        min-width: 120px;
+    }
+
+    /* Machines-requiring-attention */
+
+    .machines-requiring-attention-table .cdk-column-MachineNo.mat-column-MachineNo {
+        min-width: 160px;
+    }
+
+    .machines-requiring-attention-table .cdk-column-Description.mat-column-Description {
+        min-width: 200px;
+    }
+
+    .machines-requiring-attention-table .cdk-column-Route.mat-column-Route {
+        min-width: 145px;
+    }
+
+    .machines-requiring-attention-table .cdk-column-pH.mat-column-pH,
+    .machines-requiring-attention-table .cdk-column-Refraction.mat-column-Refraction {
+        max-width: 7%;
+    }
+
+    .machines-requiring-attention-table .cdk-column-TrampOilLevel.mat-column-TrampOilLevel {
+        min-width: 160px;
+    }
+
+    .machines-requiring-attention-table .cdk-column-DaysSinceLastCheck.mat-column-DaysSinceLastCheck {
+        min-width: 220px;
+    }
+
+    /* Machine's Application */
+
+    .application-table .cdk-column-Application.mat-column-Application,
+    .application-table .cdk-column-Concentration.mat-column-Concentration,
+    .application-table .cdk-column-AverageGallons.mat-column-AverageGallons {
+        min-width: 80px;
+    }
+
+    .application-table .cdk-column-Machine.mat-column-Machine,
+    .application-table .cdk-column-EndDate.mat-column-EndDate,
+    .application-table .cdk-column-StartDate.mat-column-StartDate {
+        min-width: 60px;
+    }
+
+    .table-sticky {
+        width: 100%;
+        position: relative;
+    }
+
+    /* Facility */
+
+    .facility .max-filter-dropdown {
+        flex-basis: 30%;
+    }
+
+    .cdk-column-GroupCompanyName.mat-column-GroupCompanyName {
+        min-width: 65px;
+    }
+
+    .cdk-column-Address1.mat-column-Address1,
+    .cdk-column-Address2.mat-column-Address2,
+    .cdk-column-Address01.mat-column-Address01,
+    .cdk-column-Address02.mat-column-Address02, 
+    .cdk-column-CompanyName.mat-column-CompanyName,
+    .cdk-column-GroupCompany.mat-column-GroupCompany {
+        min-width: 50px;
+    }
+
+    .cdk-column-FluidType.mat-column-FluidType {
+        min-width: 50px;
+    }
+
+    .fluids-table .cdk-column-ManufacturerName.mat-column-ManufacturerName {
+        min-width: 95px;
+    }
+
+    .fluids-table .cdk-column-Status.mat-column-Status {
+        max-width: 4%;
+    }
+
+    .fluids-table .cdk-column-ModifiedDate.mat-column-ModifiedDate {
+        min-width: 70px;
+    }
+
+    .fluids-table .cdk-column-DesignConcentrationHigh.mat-column-DesignConcentrationHigh,
+    .fluids-table .cdk-column-DesignConcentrationLow.mat-column-DesignConcentrationLow,
+    .fluids-table .cdk-column-DigitalTitrationFactor.mat-column-DigitalTitrationFactor {
+        min-width: 130px;
+    }
+
+    .cdk-column-TitrationFactor.mat-column-TitrationFactor,
+    .cdk-column-MSDSSheet.mat-column-MSDSSheet {
+        min-width: 50px;
+    }
+
+    .manufacturer-table .cdk-column-ManufacturerName.mat-column-ManufacturerName {
+        min-width: 30%;
+    }
+
+    .manufacturer-table .cdk-column-Status.mat-column-Status {
+        max-width: inherit;
+    }
+
+    .company-group-table .cdk-column-ModifiedDate.mat-column-ModifiedDate,
+    .company-table .cdk-column-ModifiedDate.mat-column-ModifiedDate {
+        min-width: 70px;
+    }
+
+    .company-table .cdk-column-SecretCode.mat-column-SecretCode {
+        min-width: 30px;
+    }
+
+    .cdk-column-HardnessAtFaucet.mat-column-HardnessAtFaucet {
+        min-width: 80px;
+    }
+
+    .cdk-column-ZoneCode.mat-column-ZoneCode {
+        min-width: 50px;
+    }
+
+    .cdk-column-ZoneDescription.mat-column-ZoneDescription {
+        min-width: 60px;
+    }
+
+    .company-user-table .cdk-column-UserEmployeeID.mat-column-UserEmployeeID {
+        min-width: 30px;
+    }
+
+    .company-profile .user .max-search {
+        flex-basis: 75%;
+    }
+
+    .cdk-column-FluidCode.mat-column-FluidCode,
+    .cdk-column-FluidName.mat-column-FluidName,
+    .cdk-column-WorkingColor.mat-column-WorkingColor {
+        min-width: 40px;
+        max-width: inherit;
+    }
+
+    .machines-fluids-table .cdk-column-pHHigh.mat-column-pHHigh,
+    .machines-fluids-table .cdk-column-pHLow.mat-column-pHLow {
+        min-width: 10px;
+        max-width: inherit;
+    }
+
+    .machines-table.company-machines-table .cdk-column-CoolantCode.mat-column-CoolantCode,
+    .machines-table.company-machines-table .cdk-column-SupervisorID.mat-column-SupervisorID {
+        min-width: 50px;
+    }
+
+    .machines-table.company-machines-table .cdk-column-Status.mat-column-Status {
+        max-width: 5.5%;
+    }
+
+    .machines-table.company-machines-table .cdk-column-MachineType.mat-column-MachineType,
+    .machines-table.company-machines-table .cdk-column-ModelNumber.mat-column-ModelNumber {
+        min-width: 30px;
+    }
+
+    .machines-table.company-machines-table .cdk-column-FluidName.mat-column-FluidName {
+        max-width: 8%;
+        min-width: 60px;
+    }
+
+    .report-machines-table .cdk-column-CoolantCode.mat-column-CoolantCode,
+    .report-machines-table .cdk-column-SupervisorID.mat-column-SupervisorID {
+        min-width: 50px;
+    }
+
+    .report-machines-table .cdk-column-Status.mat-column-Status {
+        max-width: 5.5%;
+    }
+
+    .report-machines-table .cdk-column-MachineType.mat-column-MachineType,
+    .report-machines-table .cdk-column-ModelNumber.mat-column-ModelNumber {
+        min-width: 30px;
+    }
+
+    .report-machines-table .cdk-column-FluidName.mat-column-FluidName {
+        max-width: 8%;
+        min-width: 60px;
+    }
+
+    .report-machines-table .cdk-column-MachineType.mat-column-MachineType {
+        /*min-width: 30px;*/
+        min-width: 50px;
+    }
+
+    .report-machines-table .cdk-column-Manufacturer.mat-column-Manufacturer {
+        min-width: 30px;
+    }
+
+    .report-machines-table .cdk-column-SerialNumber.mat-column-SerialNumber {
+        min-width: inherit;
+    }
+
+    .report-machines-table .cdk-column-MachineNumber.mat-column-MachineNumber {
+        min-width: 40px;
+    }
+
+    .machines-table .cdk-column-ModifiedDate.mat-column-ModifiedDate {
+        min-width: 40px;
+    }
+
+    .report-machines-table .cdk-column-Status.mat-column-Status {
+        max-width: 6.5%;
+    }
+
+    .report-machines-table .cdk-column-FluidName.mat-column-FluidName {
+        min-width: 50px;
+        max-width: 8%;
+    }
+
+    .report-machines-table .cdk-column-CoolantCode.mat-column-CoolantCode,
+    .report-machines-table .cdk-column-SupervisorID.mat-column-SupervisorID {
+        min-width: 40px;
+    }
+}
+

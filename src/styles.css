@@ -1,1 +1,330 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+:root {
+    --font: 'Roboto', sans-serif;
+    --black: #000000;
+    --brand-primary: #FF69B4;
+    --white: #FFFFFF;
+    --background-color: #F5F5F5;
+    --text-placeholder: #A6ABBC;
+    --border-color: #E4E4E4;
+    --btn-primary: #2B96E8;
+    --row-disabled: rgba(245, 245, 245, 0.70);
+    --danger: #FF5C5C;
+    --success: #00B65C;
+    --warning: #FDDD48;
+}
+/* Header */
+
+header {
+    background-color: var(--brand-primary);
+    min-height: 58px;
+}
+
+header .vertical-center {
+    height: 58px;
+    /*padding: 10px 0;*/
+    align-items: center;
+}
+body {
+    font-family: var(--font);
+    background-color: var(--background-color);
+    margin: 0;
+    color: var(--black);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    /*letter-spacing: 0.64px;*/
+}
+
+.header-div .logo-link {
+    height: 80px;
+    width: 80px;
+    margin-top: -8px;
+    display: inline-flex;
+}
+.header-div {
+    display: flex;
+    min-height: 4rem;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    /*height: 42px;*/
+}
+
+.header-div .menu-icon-inner.mat-icon-button {
+    /*color: rgba(0, 0, 0, 0.80);*/
+    color: rgba(255, 255, 255, 0.80);
+    margin-top: -4px;
+    margin-right: 5px;
+}
+
+header.navbar {
+    display: flex;
+    background-color: var(--brand-primary);
+    /*box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05), inset 0 -1px 0 rgba(0, 0, 0, 0.1);*/
+    max-height: 80px !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+}
+.navbar {
+    padding: 0px;
+}
+
+/* Landing Page New */
+
+.welcome-text h6,
+.welcome-text h4 {
+    letter-spacing: 3.04px;
+    font-weight: 700;
+}
+
+.welcome-text h4,
+.landing-page-tile .col-card h3 {
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.tile-card {
+    background: var(--brand-primary);
+    width: 116px;
+    height: 116px;
+    border-radius: 16px;
+    margin: 0 auto 16px;
+    overflow: hidden;
+}
+
+.card-gap {
+    column-gap: 50px;
+}
+
+.col-max-width {
+    /*max-width: 210px;
+    flex-basis: 210px;*/
+    max-width: fit-content;
+}
+
+.col-card:hover {
+    cursor: pointer;
+}
+
+.col-card h6 {
+    font-weight: 700;
+}
+
+.col-card:hover .tile-card {
+    /*box-shadow: 0 5px 5px -3px rgb(7 39 55 / 50%), 0 3px 14px 2px rgb(7 39 55 / 50%);*/
+    box-shadow: 0px 5px 5px -3px rgba(7,39,55,0.5), 0px 3px 14px 2px rgba(7,39,55,0.5);
+    cursor: pointer;
+}
+
+.landing-page {
+    position: relative;
+    /*min-height: calc(100vh - 58px);*/
+    min-height: calc(100vh - 100px);
+    background-color: rgba(255, 255, 255, 0.87);
+    z-index: 0;
+}
+
+.landing-page:after {
+    content: '';
+    background-image: url('assets/images/pattern.png');
+    position: absolute;
+    z-index: -9;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.landing-content-section {
+    min-height: calc(100vh - 128px);
+    /*height: calc(100vh - 128px);*/
+}
+
+.logo-size{
+    max-width: 100px;
+}
+.logo-text-size{
+    max-width: 400px;
+    min-width: 380px;
+}
+.titleBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.welcome-class {
+    display: inline-flex;
+    flex-direction: row;
+    column-gap: 8px;
+    align-items: center;
+}
+
+.welcome-class .user-circle {
+    width: 38px;
+    height: 40px;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.welcome-class .user-circle svg {
+    width: 22px;
+    height: 22px;
+}
+
+.welcome-class .cloumn-align {
+    text-align: left;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.welcome-class .cloumn-align span {
+    font-size: 14px;
+    font-weight: 400;
+    /*font-weight: 700;*/
+    line-height: 21px;
+    color: var(--white);
+    letter-spacing: 0;
+}
+
+.welcome-name {
+    color: var(--white);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    min-width: 80px;
+    /*min-width: 100px;*/
+    display: inline-block;
+    max-width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    color: var(--white);
+    letter-spacing: 0;
+}
+.nav-link,
+.c-pointer {
+    cursor: pointer;
+}
+
+.c-pointer-none {
+    pointer-events: none;
+}
+.text-right {
+    text-align: right !important;
+}
+*,
+.mat-menu-item,
+.mat-button {
+    font-family: var(--font);
+}
+.mat-menu-panel {
+    min-width: 205px !important;
+}
+
+.mat-menu-item {
+    display: flex !important;
+    align-items: center;
+    column-gap: 10px;
+    color: var(--black);
+}
+
+.mat-menu-item i {
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.80);
+}
+.mat-menu-item-submenu-trigger::after {   
+    border-style: unset !important;    
+}
+.btn-settings button.menu-settings .mat-button-focus-overlay {
+    opacity: 0 !important;
+}
+
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #0c0c0c;
+  }  
+  .mat-tooltip {
+    position: relative;
+    background-color: rgb(38, 37, 37); 
+    color: #0c0c0c; 
+    border: none; 
+    border-radius: 8px !important;
+    padding: 8px !important; 
+    font-size: 14px; 
+    font-weight: 400;
+    margin-top: 15px !important;
+    &::after {
+      width: 0;
+      height: 0;
+      content: '';
+      position: absolute;
+      border-left: 0.5rem solid transparent;
+      border-right: 0.5rem solid transparent;
+      border-bottom: 0.5rem solid #0c0c0c;
+    }
+    &.below {
+      overflow: initial;
+      margin-top: 1rem;
+      &:after {
+        top: -0.5rem;
+        right: calc(30% - 0.5rem);
+        transform: rotate(0);
+      }
+    }
+  
+    &.above {
+      overflow: initial;
+      margin-bottom: 1rem;
+      &:after {
+        bottom: -0.5rem;
+        right: calc(50% - 0.5rem);
+        transform: rotate(180deg);
+      }
+    }
+  
+    &.right {
+      overflow: initial;
+      margin-left: 1rem;
+      &:after {
+        left: -0.75rem;
+        top: calc(50% - 0.25rem);
+        transform: rotate(270deg);
+      }
+    }
+  
+    &.left {
+      overflow: initial;
+      margin-right: 1rem;
+      &:after {
+        right: -0.75rem;
+        top: calc(50% - 0.25rem);
+        transform: rotate(90deg);
+      }
+    }
+  }
+  .content-container {
+    margin-top: 80px;
+    height: calc(100% - 80px);
+}
+.mat-tab-header, .mat-tab-nav-bar {
+    border-bottom: 0;
+}
+
+.mat-tab-nav-bar.mat-primary {
+    border-bottom: 1px solid var(--border-color);
+}
