@@ -67,6 +67,9 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "port": 48300
+          },
           "configurations": {
             "production": {
               "browserTarget": "WM_Website:build:production"

@@ -3,6 +3,7 @@ import { GuardsCheckStart, NavigationEnd, NavigationStart, Router } from '@angul
 import { CommonService } from './services/common.service';
 import { NgxSpinnerService } from "ngx-spinner";
 import { Contacts } from './models/wamil-makeover-model';
+import { environment } from 'src/environments/environment';
 
 
 @Component({
@@ -39,6 +40,7 @@ export class AppComponent implements OnInit {
     userId!: string;
     checked: boolean = false;
     language!: string;
+    baseUrl:string = environment.baseURL;
     contacts:Contacts ={
         Instagram:'https://instagram.com/wamil_makeover?igshid=NzZlODBkYWE4Ng==',
         Whatsapp:'https://wa.me/+919363027106',

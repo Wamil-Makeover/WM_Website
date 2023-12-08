@@ -152,8 +152,8 @@ header.navbar {
     max-width: 100px;
 }
 .logo-text-size{
-    max-width: 400px;
-    min-width: 380px;
+    max-width: 340px;
+    min-width: 320px;
 }
 .titleBar {
     display: flex;

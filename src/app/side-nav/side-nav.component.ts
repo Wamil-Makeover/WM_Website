@@ -2,6 +2,7 @@ import { ChangeDetectorRef, Component, HostListener, OnDestroy, OnInit } from '@
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { CommonService } from '../services/common.service';
 import { Menu } from '../models/wamil-makeover-model';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-side-nav',
@@ -13,40 +14,8 @@ import { Menu } from '../models/wamil-makeover-model';
 export class SideNavComponent implements OnDestroy {
   visibleSideMenu: boolean=false;
 
-  isAddEditMachineType: boolean = false;
-  isAddEditMachines: boolean = false;
-  isAddEditTasksFrequency: boolean = false;
-  isAddEditScheduleTasks: boolean = false;
-  isAddEditUsers: boolean = false;
-  isViewReport: boolean = false;
-  isViewLoginUserNameAutoCreation: boolean = false;
-  isViewFacilityMaster: boolean = false;
-  isViewFluids: boolean = false;
-  isViewMeasureMaster: boolean = false;
-  isViewMeasure: boolean = false;
-  reportactive!: string;
-  currentURL!: string;
-  Home: any;
-  MachineType: any;
-  Machines: any;
-  Tasks: any;
-  Measures: any;
-  UserManagement: any;
-  Report: any;
-  Dashboard: any;
-  TaskHistory: any;
-  CompanyMaster: any;
-  CompanyGroup: any;
-  Company: any;
-  Facilities: any;
-  Fluid: any;
-  Manufacturer: any;
-  Fluids: any;
-  ManufacturerConcentrationValues: any;
-  isViewCompanyMaster: boolean = false;
-  isViewTestMaster: boolean = false;
-  isViewProductMaster: boolean = false;
   expanded: boolean=false;
+  baseUrl:string = environment.baseURL;
 
   expandedMenu = {
       "BridalMakeup": false,
@@ -57,6 +26,7 @@ export class SideNavComponent implements OnDestroy {
   public sideNavState: boolean = false;
   public linkText: boolean = false;
   public toolTipDisable: boolean = true;
+    currentURL: any;
 
   constructor(public router: Router, changeDetectorRef: ChangeDetectorRef,
        private commonService: CommonService, private _activatedRoute: ActivatedRoute) {
