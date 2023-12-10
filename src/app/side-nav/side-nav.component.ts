@@ -3,17 +3,20 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { CommonService } from '../services/common.service';
 import { Menu } from '../models/wamil-makeover-model';
 import { environment } from 'src/environments/environment';
+import { onMainContentChange, onSideNavChange, animateText, indicatorRotate } from '../Animation/animation';
+import { MediaMatcher } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-side-nav',
   templateUrl: './side-nav.component.html',
-  styleUrls: ['./side-nav.component.css']
+  styleUrls: ['./side-nav.component.css'],
+  animations: [onMainContentChange, onSideNavChange, animateText, indicatorRotate]
 })
 
 
 export class SideNavComponent implements OnDestroy {
   visibleSideMenu: boolean=false;
-
+  mobileQuery: MediaQueryList;
   expanded: boolean=false;
   baseUrl:string = environment.baseURL;
 
@@ -27,20 +30,44 @@ export class SideNavComponent implements OnDestroy {
   public linkText: boolean = false;
   public toolTipDisable: boolean = true;
     currentURL: any;
+    private _mobileQueryListener: () => void;
 
-  constructor(public router: Router, changeDetectorRef: ChangeDetectorRef,
+    resizeTimer :any ;
+    clicked: boolean = false;
+
+  constructor(public router: Router, public changeDetectorRef: ChangeDetectorRef,public media: MediaMatcher,
        private commonService: CommonService, private _activatedRoute: ActivatedRoute) {
 
-      // this.commonService.reportactive.asObservable().subscribe((res) => {
-      //     this.reportactive = res;
-      // });
-      this.commonService.sideNavState$.subscribe(res => {
-          this.onSideNavChange = res;
-      });
+        this.commonService.sideNavState$.subscribe(res => {
+            this.onSideNavChange = res;
+        })
       
-      // this.commonService.$toggle.subscribe(val => {
-      //     this.visibleSideMenu = val;
-      // });
+        this.mobileQuery = media.matchMedia('screen and (max-width: 1024px)');
+        this._mobileQueryListener = () => changeDetectorRef.detectChanges();
+        this.mobileQuery.addListener(this._mobileQueryListener);
+      
+        if (this.mobileQuery.matches) {
+            this.visibleSideMenu = false;
+            this.router.events.subscribe(event => {
+                if (event instanceof NavigationEnd) {
+                    this.commonService.setToggle(false);
+                }
+            });
+        } else {
+            this.visibleSideMenu = true;
+            this.router.events.subscribe(event => {
+                if (event instanceof NavigationEnd) {
+                    this.commonService.setToggle(true);
+                }
+            });
+            this.toolTipDisable = false;
+            this.linkText = true;
+            this.commonService.sideNavState$.next(this.sideNavState = true);
+        }
+      
+        this.commonService.$toggle.subscribe(val => {
+            this.visibleSideMenu = val;
+        });
 
       this.router.events.subscribe(
           (event: any) => {
@@ -60,24 +87,24 @@ export class SideNavComponent implements OnDestroy {
       );
   }
 
-  clicked: boolean = false;
 
   expandSubmenu(name:Menu) {
-      if (this.expandedMenu[name] != true) {
-          this.expandedMenu[name] = true;
+    if (this.expandedMenu[name] != true) {
+        this.expandedMenu[name] = true;
 
-          this.sideNavState = false;
-          setTimeout(() => {
-              this.toolTipDisable = !this.sideNavState;
-              this.linkText = this.sideNavState;
-          }, 200)
-          this.commonService.sideNavState$.next(this.sideNavState);
+        this.sideNavState = false;
+        setTimeout(() => {
+            this.toolTipDisable = !this.sideNavState;
+            this.linkText = this.sideNavState;
+        }, 200)
+        this.commonService.sideNavState$.next(this.sideNavState);
 
-      } else {
-          this.expandedMenu[name] = false;
-          this.clicked = false;
-      }
-  }
+    } else {
+        this.expandedMenu[name] = false;
+        this.clicked = false;
+    }
+}
+
 
 
   ngOnInit() {
@@ -87,7 +114,9 @@ export class SideNavComponent implements OnDestroy {
   }
 
   ngOnDestroy(): void {
-  }
+    this.mobileQuery.removeListener(this._mobileQueryListener);
+}
+
 
   // Sidenav overlay fn
   backdropClick() {
@@ -112,5 +141,38 @@ export class SideNavComponent implements OnDestroy {
       //this.commonService.setgroupCompanyId(null);
   }
 
+  @HostListener('window:resize') onResize() {
+    // guard against resize before view is rendered
+
+    clearTimeout(this.resizeTimer);
+    this.resizeTimer = setTimeout(() => {
+        if (this.mobileQuery.matches) {
+            //console.log("< 1024");
+            this.visibleSideMenu = false;
+            this.router.events.subscribe(event => {
+                if (event instanceof NavigationEnd) {
+                    this.commonService.setToggle(false);
+                }
+            });
+            this.toolTipDisable = true;
+            this.linkText = false;
+            this.commonService.sideNavState$.next(this.sideNavState = false);
+        } else {
+            //console.log(" > 1024");
+            this.visibleSideMenu = true;
+            this.router.events.subscribe(event => {
+                if (event instanceof NavigationEnd) {
+                    this.commonService.setToggle(true);
+                }
+            });
+            this.toolTipDisable = false;
+            this.linkText = true;
+            this.commonService.sideNavState$.next(this.sideNavState = true);
+        }
+    }, 200);
+    this.expandedMenu.BridalMakeup = false;
+    this.expandedMenu.HairStyling = false;
+    this.expandedMenu.SareeDraping = false;
+}
 
 }

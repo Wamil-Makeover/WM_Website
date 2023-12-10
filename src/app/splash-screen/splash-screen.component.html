@@ -1,0 +1,7 @@
+<div class="splash-page" [@zoomAnimation]="animationState" (@zoomAnimation.done)="onAnimationEnd()">
+    <div class="stars container-fluid">
+        <div class="d-flex flex-column" *ngIf="splashLogo">
+            <img class="splash-logo" src="/assets/images/Logo_V1.png" alt="Wamil Makeover">
+        </div>
+    </div>
+</div>

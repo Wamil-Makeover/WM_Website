@@ -1,7 +1,7 @@
-<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar py-2">
+<header *ngIf="!splashLoading" class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar py-2">
     <div class="row mx-0 header-div w-100">
         <div class="logo-sec col col-max-width d-flex-center-start">
-            <!-- <button *ngIf="router && router.url != '/' && router.url != '/home'" mat-icon-button class="menu-icon-inner"
+            <button *ngIf="router && router.url != '/' && router.url != '/home'" mat-icon-button class="menu-icon-inner"
                 (click)="setToggle()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
                     stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
@@ -10,9 +10,9 @@
                     <line x1="3" y1="6" x2="21" y2="6" />
                     <line x1="3" y1="18" x2="21" y2="18" />
                 </svg>
-            </button> -->
+            </button>
             <a class="logo-link pr-3" routerLink="/home">
-                <img src="{{baseUrl}}/assets/images/Logo.svg" />
+                <img class="header-logo" src="{{baseUrl}}/assets/images/Logo_SkhTra_Blue.svg" />
             </a>
         </div>
        
@@ -23,17 +23,10 @@
                         <span>Welcom to <br /></span>
                         <strong class="welcome-name" container="body"> Wamil Makeover</strong>
                     </span>
+                    <!-- <div class="user-circle c-pointer" tooltip="Contact details"  aria-label="Contact details"> -->
                     <div class="user-circle c-pointer" matTooltipClass="below" matTooltipPosition="below"
                         matTooltipHideDelay="50" matTooltip="Contact details" aria-label="Contact details">
-                        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path
-                                d="M3 14C3 14 2 14 2 13C2 12 3 9 8 9C13 9 14 12 14 13C14 14 13 14 13 14H3ZM8 8C8.79565 8 9.55871 7.68393 10.1213 7.12132C10.6839 6.55871 11 5.79565 11 5C11 4.20435 10.6839 3.44129 10.1213 2.87868C9.55871 2.31607 8.79565 2 8 2C7.20435 2 6.44129 2.31607 5.87868 2.87868C5.31607 3.44129 5 4.20435 5 5C5 5.79565 5.31607 6.55871 5.87868 7.12132C6.44129 7.68393 7.20435 8 8 8Z"
-                                fill="black" />
-                        </svg> -->
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
-                            <path
-                                d="M160-40v-80h640v80H160Zm0-800v-80h640v80H160Zm320 400q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35ZM160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm70-80q45-56 109-88t141-32q77 0 141 32t109 88h70v-480H160v480h70Zm118 0h264q-29-20-62.5-30T480-280q-36 0-69.5 10T348-240Zm132-280q-17 0-28.5-11.5T440-560q0-17 11.5-28.5T480-600q17 0 28.5 11.5T520-560q0 17-11.5 28.5T480-520Zm0 40Z" />
-                        </svg>
+                        <img class="contact-icon" src="{{ baseUrl}}/assets/images/contact-icon.svg" />
                     </div>
                     <div class="c-pointer" matTooltipClass="below" matTooltipPosition="below" matTooltipHideDelay="50"
                         matTooltip="Contact details" aria-label="Contact details">
@@ -92,7 +85,9 @@
         </div>
     </div>
 </header>
-
+<div *ngIf="splashLoading;else routing">
+<app-splash-screen></app-splash-screen>
+</div>
 <!-- ngx loader -->
 <ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="default" color="#fff" type="ball-clip-rotate" [fullScreen]="true">
     <p style="color: white"> Loading... </p>
@@ -107,7 +102,8 @@
 </ng-template>
 <ngx-loading [show]="loading" fullScreenBackdrop=true [template]="customLoadingTemplate">
 </ngx-loading> -->
-
-<div class="content-container px-0 container-fluid content-container px-0">
-    <router-outlet></router-outlet>
-</div>
+<ng-template #routing>
+    <div  class="content-container px-0 container-fluid content-container px-0">
+        <router-outlet></router-outlet>
+    </div>
+</ng-template>

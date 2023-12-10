@@ -39,6 +39,7 @@ export class AppComponent implements OnInit {
     sessionId!: string;
     userId!: string;
     checked: boolean = false;
+    splashLoading: boolean = true;
     language!: string;
     baseUrl:string = environment.baseURL;
     contacts:Contacts ={
@@ -52,7 +53,6 @@ export class AppComponent implements OnInit {
       private change: ChangeDetectorRef, public router: Router, 
       private spinner: NgxSpinnerService) {
         this.common.setLoading.subscribe((res) => {
-            //this.loading = res;
             if (res) {
                 this.spinner.show();
             } else {
@@ -61,6 +61,14 @@ export class AppComponent implements OnInit {
             this.sessionId = '';
             this.userId = '';
             
+        });        
+        this.common.setSplashLoading.subscribe((res) => {
+            if(!res){
+            setTimeout(()=>{
+                this.common.loading(false);
+            },1000)
+           this.splashLoading = res;
+            }
         });        
         
         this.common.$toggle.subscribe(val => {
@@ -89,7 +97,9 @@ export class AppComponent implements OnInit {
     }
 
     ngOnInit() {     
-
+        setTimeout(()=>{
+            this.common.splashLoading(false);
+          },5000)
         this.common.getLoading.subscribe((res) => {
             if (res) {
                 this.spinner.show();
@@ -109,6 +119,7 @@ export class AppComponent implements OnInit {
             if (value instanceof NavigationEnd) {
                 this.spinner.hide();
             }
+            this.change.detectChanges();
         });
 
         if (window.location.pathname == '/report') {

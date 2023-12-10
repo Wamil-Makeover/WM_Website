@@ -10,6 +10,8 @@ export class LandingComponent implements OnInit {
 
   constructor() { }
   baseUrl:string = environment.baseURL;
+  currentYear:number = new Date().getFullYear();
+
   ngOnInit(): void {
   }
 
