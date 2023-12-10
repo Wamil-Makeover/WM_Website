@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { CommonService } from '../services/common.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-splash-screen',
@@ -20,6 +21,7 @@ export class SplashScreenComponent implements OnInit {
 
   animationState = 'start';
   splashLogo:boolean = false;
+  baseUrl:string = environment.baseURL;
 constructor(private common:CommonService){}
   ngOnInit(): void {
     setTimeout(() => {
